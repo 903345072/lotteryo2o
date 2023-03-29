@@ -1,0 +1,38 @@
+CREATE TABLE `eb_rule` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `rule_name` varchar(255) DEFAULT NULL,
+  `rule_path` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+CREATE TABLE `eb_shop_gonggao` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `shop_id` int(11) DEFAULT NULL,
+  `add_time` int(11) DEFAULT NULL,
+  `gonggao` text,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+CREATE TABLE `eb_shop_rule` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `shop_id` int(11) DEFAULT NULL,
+  `rule_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+CREATE TABLE `eb_shops` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `shop_name` varchar(255) DEFAULT NULL,
+  `shop_money` decimal(10,2) DEFAULT NULL,
+  `shop_pic1` text,
+  `shop_pic2` text,
+  `shop_pic3` text,
+  `shop_qq` varchar(255) DEFAULT NULL,
+  `shop_phone` varchar(255) DEFAULT NULL,
+  `shop_wechat` varchar(255) DEFAULT NULL,
+  `shop_address` varchar(255) DEFAULT NULL,
+  `shop_uname` varchar(255) DEFAULT NULL,
+  `add_time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
